@@ -54,6 +54,6 @@ app.post('/404', (req, res) => {
     res.redirect('/');
 });
 
-app.listen(proccess.env.PORT || 3000, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log('Demarrage du serveur sur le port:3000');
 });
