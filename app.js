@@ -13,8 +13,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 // Connection a la BDD
-
-mongoose.connect('mongodb://localhost:27017/todolistDB', { useNewUrlParser: true });
+mongoose.connect(
+    'mongodb+srv://admin-josue:test-123@cluster0.8brvw.mongodb.net/todolistDB',
+    { useNewUrlParser: true },
+);
+// mongoose.connect('mongodb://localhost:27017/todolistDB', { useNewUrlParser: true });
 
 const itemsSchema = {
     name: String,
